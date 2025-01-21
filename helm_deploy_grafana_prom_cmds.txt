@@ -1,0 +1,12 @@
+1> switch to the cluster you want to work on.
+
+2> add the helm repo grafana and prometheus.
+helm repo add  https://grafana.github.io/helm-charts
+helm repo add  https://prometheus-community.github.io/helm-charts
+ 
+update this repos 
+
+3> deploy them using helm, the values used are present in toufi user dir.
+helm install grafana grafana/grafana -n grafana -f current_values.yaml
+
+helm install prometheus prometheus-community/prometheus -n prometheus -f current-prom-values.yaml
