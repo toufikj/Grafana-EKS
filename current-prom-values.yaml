@@ -82,11 +82,20 @@ alertmanager:
   nodeSelector: {}
   persistence:
     accessModes:
-    - ReadWriteOnce
+      - ReadWriteOnce
     enabled: true
     size: 2Gi
-  persistentVolume:
     storageClass: gp2
+    storageClassName: gp2
+    existingClaim: ""
+  persistentVolume:
+    accessModes:
+      - ReadWriteOnce
+    enabled: true
+    size: 2Gi
+    storageClass: gp2
+    storageClassName: gp2
+    existingClaim: ""
   podAnnotations: {}
   podAntiAffinity: ""
   podAntiAffinityTopologyKey: kubernetes.io/hostname
@@ -653,6 +662,7 @@ prometheus-pushgateway:
     existingClaim: ""
     mountPath: /data
     size: 2Gi
+    storageClass: gp2
     subPath: ""
   persistentVolumeLabels: {}
   podAnnotations: {}
