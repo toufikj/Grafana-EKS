@@ -20,6 +20,7 @@ cd Grafana-EKS
 Follow the steps to deploy the Grafana and prometheus
 Follow the commands from file helm_deploy-grafana-prom-cmd.txt exactly
 
+If the pvc is pending state, delete the pending pvc and try again.
 
 Check if all resources created are running.
 
