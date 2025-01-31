@@ -4,9 +4,9 @@
 helm repo add  https://grafana.github.io/helm-charts
 helm repo add  https://prometheus-community.github.io/helm-charts
  
-update this repos 
+update this repos: helm repo update 
 
 3> deploy them using helm, the values used are present in toufi user dir.
-helm install grafana grafana/grafana -n grafana -f current_values.yaml
+helm install grafana grafana/grafana -n grafana -f grafana_values.yaml
 
-helm install prometheus prometheus-community/prometheus -n prometheus -f current-prom-values.yaml
+helm install prometheus prometheus-community/prometheus -n prometheus -f prometheus_values.yaml
