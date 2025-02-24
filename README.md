@@ -29,3 +29,9 @@ then create the ingress using command: kubectl apply -f grafana-ingress.yaml
 Now you can access the grafana using alb dns
 
 After login to grafana, create a prometheus datasource and add this url: http://prometheus-server.prometheus.svc.cluster.local
+
+For loki logs, run
+
+helm install loki grafana/loki-stack -n loki -f loki-values.yaml
+
+and add the datasource with url: http://loki.loki.svc.cluster.local:3100
